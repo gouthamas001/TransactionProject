@@ -18,15 +18,15 @@ public class RelativeBalanceCalc {
 
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter account id : ");
-        String accId = "ACC334455";
-//      String accId = scan.next();
+        //String accId = "ACC334455";
+        String accId = scan.nextLine();
         System.out.println("Enter from date : ");
-        String from = "20/10/2018 12:00:00";
-//        String from = scan.nextLine();
+        //String from = "20/10/2018 12:00:00";
+        String from = scan.nextLine();
         LocalDateTime fromTime = timeSplitter(from);
         System.out.println("Enter to date : ");
-//        String to = scan.nextLine();
-        String to = "20/10/2018 19:00:00";
+        String to = scan.nextLine();
+        //String to = "20/10/2018 19:00:00";
         LocalDateTime toTime = timeSplitter(to);
 
         Map<String, Object> resp = relativeBalanceCalculator(accId, fromTime, toTime, txnList);
@@ -61,6 +61,7 @@ public class RelativeBalanceCalc {
         return values;
     }
 
+    //Mapper function to map csv values to transaction objects
     public static List<Transaction> txnIntitializer(List<List<String>> data) {
         List<Transaction> txnList = new ArrayList<>();
         data.remove(0);
@@ -102,8 +103,8 @@ public class RelativeBalanceCalc {
                 .collect(Collectors.toList());
 
         //List of valid Positive Transaction IDs
-//        List<String> posTxnIds = posTxns.stream().map(Transaction::getTransactionId)
-//                .collect(Collectors.toList());
+        //List<String> posTxnIds = posTxns.stream().map(Transaction::getTransactionId)
+       //           .collect(Collectors.toList());
 
 
         //Predicate<Transaction> isTransactionReversal = e -> e.getTransactionType() == "REVERSAL";
