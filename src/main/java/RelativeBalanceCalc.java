@@ -18,15 +18,15 @@ public class RelativeBalanceCalc {
 
         Scanner scan = new Scanner(System.in);
         System.out.println("Enter account id : ");
-        String accId = "ACC334455";
-        //String accId = scan.nextLine();
+        //String accId = "ACC334455";
+        String accId = scan.nextLine();
         System.out.println("Enter from date : ");
-        String from = "20/10/2018 12:00:00";
-        //String from = scan.nextLine();
+        //String from = "20/10/2018 12:00:00";
+        String from = scan.nextLine();
         LocalDateTime fromTime = timeSplitter(from);
         System.out.println("Enter to date : ");
-        //String to = scan.nextLine();
-        String to = "21/10/2018 19:00:00";
+        String to = scan.nextLine();
+        //String to = "21/10/2018 19:00:00";
         LocalDateTime toTime = timeSplitter(to);
 
         Map<String, Object> resp = relativeBalanceCalculator(accId, fromTime, toTime, txnList);
