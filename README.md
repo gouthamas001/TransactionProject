@@ -1,4 +1,9 @@
 # TransactionProject
+
+Maven Project : Use maven to build the project. Load the dependencies in pom.xml
+
+For Testing : Provide the arguments through input prompt.
+
 Added Logic to calculate Relative Balance of a bank account for a given time period.
 
 RelativeBalanceCalc.java -> Java file which contains core logic. 
